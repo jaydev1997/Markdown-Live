@@ -1,0 +1,151 @@
+@import "https://fonts.googleapis.com/css?family=Cutive|Cutive+Mono";
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cutive';
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.main {
+  text-align: center;
+  background-color: #FCFCFC;
+  height: 100%;
+  position: relative;
+  color: #262626;
+}
+.main:after {
+  content: '';
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(to right, red 50%, transparent 50%), linear-gradient(to right, red 50%, transparent 50%), linear-gradient(to bottom, red 50%, transparent 50%), linear-gradient(to bottom, red 50%, transparent 50%);
+  background-position: left top, left bottom, left top, right top;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 30px 1px, 30px 1px, 1px 50px, 1px 50px;
+}
+
+.title {
+  padding: 20px;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  height: 80px;
+}
+.title .red {
+  color: red;
+}
+.title .dot {
+  position: relative;
+}
+.title .dot:after {
+  content: '.';
+  color: red;
+  position: absolute;
+  bottom: 23px;
+  left: 0;
+  text-shadow: 1px 1px 1px #FCFCFC;
+}
+
+textarea {
+  height: 500px;
+  border: none;
+  background: transparent;
+  resize: none;
+  outline: none;
+  font-family: 'Cutive Mono';
+  font-size: 20px;
+  color: #262626;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  textarea {
+    color: red;
+    -webkit-text-fill-color: #262626;
+  }
+}
+textarea, .output {
+  width: 49%;
+  padding: 20px 50px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: 'Cutive';
+  font-size: 20px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  cursor: pointer;
+  color: #262626;
+}
+button span {
+  color: red;
+}
+
+.github {
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  width: 35px;
+  font-size: 25px;
+}
+
+svg {
+  fill: #262626;
+}
+
+.light {
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: #262626;
+  color: #FCFCFC;
+}
+.dark button {
+  color: #FCFCFC;
+}
+.dark textarea {
+  color: #FCFCFC;
+}
+.dark svg {
+  fill: #FCFCFC;
+}
+.dark .dot:after {
+  text-shadow: 1px 1px 1px #262626;
+}
+
+a {
+  color: red;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .dark textarea {
+    color: red;
+    -webkit-text-fill-color: #FCFCFC;
+  }
+}
